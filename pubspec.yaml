@@ -33,6 +33,8 @@ dependencies:
   fluttertoast: ^8.2.8
   salomon_bottom_bar: ^3.3.2
   cupertino_icons: ^1.0.8
+  adhan: ^2.0.0+1
+  intl: ^0.20.0
 
 dev_dependencies:
   flutter_test:
@@ -56,6 +58,7 @@ flutter:
   uses-material-design: true
   assets:
     - asset/Logo.png
+    - asset/Mosque.png
 
   # To add assets to your application, add an assets section, like this:
   # assets:
