@@ -137,14 +137,7 @@ class _DashboardPageState extends State<DashboardPage> {
           Expanded(
             child: Center(
               child: ListView(
-                children: [
-                  buildDoaCard(
-                    title: "Doa Sebelum Tidur",
-                    description: "بِاسْمِكَ رَبِّـي وَضَعْـتُ جَنْـبِي",
-                    icon: Icons.nightlight_round,
-                    color: Colors.green,
-                  ),
-                ],
+                children: [],
               ),
             ),
           ),
