@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:projectuts/page/Dashboard.dart';
 import 'package:projectuts/page/Doa.dart';
+import 'package:projectuts/page/Waktu.dart';
 import 'package:salomon_bottom_bar/salomon_bottom_bar.dart';
 
 void main() {
@@ -27,8 +28,8 @@ class _DashboardState extends State<Dashboard> {
   final List<Widget> _pages = [
     DashboardPage(),
     DoaPage(),
-    Center(child: Text("Waktu Page")),
-    Center(child: Text("Waktu Page")),
+    WaktuPage(),
+    Center(child: Text("Profile")),
   ];
 
   @override
