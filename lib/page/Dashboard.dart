@@ -16,9 +16,8 @@ class _DashboardPageState extends State<DashboardPage> {
   String waktuSelanjutnya = '';
   Timer? _timer;
 
-  // List untuk data jadwal shalat (contoh data)
   final List<Map<String, String>> jadwalShalat = [
-    {'nama': 'Shubuh', 'waktu': '04:30'},
+    {'nama': 'Shubuh', 'waktu': '04:07'},
     {'nama': 'Dzuhur', 'waktu': '12:00'},
     {'nama': 'Ashar', 'waktu': '15:15'},
     {'nama': 'Maghrib', 'waktu': '18:00'},

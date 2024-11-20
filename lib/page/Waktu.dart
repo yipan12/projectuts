@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class WaktuPage extends StatelessWidget {
   final List<Map<String, String>> waktuSholat = [
-    {"nama": "Shubuh", "waktu": "04:30"},
+    {"nama": "Shubuh", "waktu": "04:07"},
     {"nama": "Dzuhur", "waktu": "12:00"},
     {"nama": "Ashar", "waktu": "15:30"},
     {"nama": "Maghrib", "waktu": "18:00"},
@@ -15,7 +15,6 @@ class WaktuPage extends StatelessWidget {
       appBar: AppBar(
         title: Text("Waktu Sholat", style: TextStyle(color: Colors.white)),
         backgroundColor: Colors.green[600],
-        centerTitle: true,
       ),
       body: ListView.builder(
         itemCount: waktuSholat.length,

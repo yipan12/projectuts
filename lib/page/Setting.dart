@@ -40,7 +40,7 @@ class _ProfilePageState extends State<SettingPage> {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          "Profile",
+          "Pengaturan",
           style: TextStyle(fontSize: 24, color: Colors.white),
         ),
         backgroundColor: const Color.fromARGB(255, 146, 146, 146),
