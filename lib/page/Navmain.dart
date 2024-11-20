@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:projectuts/page/Dashboard.dart';
 import 'package:projectuts/page/Doa.dart';
+import 'package:projectuts/page/Setting.dart';
 import 'package:projectuts/page/Waktu.dart';
 import 'package:salomon_bottom_bar/salomon_bottom_bar.dart';
 
@@ -29,7 +30,7 @@ class _DashboardState extends State<Dashboard> {
     DashboardPage(),
     DoaPage(),
     WaktuPage(),
-    Center(child: Text("Profile")),
+    SettingPage()
   ];
 
   @override
@@ -56,12 +57,12 @@ class _DashboardState extends State<Dashboard> {
           SalomonBottomBarItem(
             icon: Icon(Icons.timer),
             title: Text("Waktu"),
-            selectedColor: Colors.orange,
+            selectedColor: Colors.green[600],
           ),
           SalomonBottomBarItem(
-            icon: Icon(Icons.person),
-            title: Text("Profile"),
-            selectedColor: Colors.teal,
+            icon: Icon(Icons.settings),
+            title: Text("Pengaturan"),
+            selectedColor: Colors.grey,
           ),
         ],
       ),

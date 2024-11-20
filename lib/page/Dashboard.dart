@@ -53,6 +53,27 @@ class _DashboardPageState extends State<DashboardPage> {
     DateTime? upcomingPrayerTime;
     String? upcomingPrayerName;
 
+    if (now.isAfter(waktuBerdoa['Isya']!)) {
+      final coordinates = Coordinates(-6.6412, 107.7636);
+      final param = CalculationMethod.muslim_world_league.getParameters();
+      final selanjutnyaHariIni = PrayerTimes.today(coordinates, param);
+
+      final shubuhBesok = DateTime(now.year, now.month, now.day + 1,
+          selanjutnyaHariIni.fajr.hour, selanjutnyaHariIni.fajr.minute);
+
+      waktuBerdoa = {
+        'Shubuh': shubuhBesok,
+        'Dhuhur': DateTime(now.year, now.month, now.day + 1,
+            selanjutnyaHariIni.dhuhr.hour, selanjutnyaHariIni.dhuhr.minute),
+        'Ashar': DateTime(now.year, now.month, now.day + 1,
+            selanjutnyaHariIni.asr.hour, selanjutnyaHariIni.asr.minute),
+        'Maghrib': DateTime(now.year, now.month, now.day + 1,
+            selanjutnyaHariIni.maghrib.hour, selanjutnyaHariIni.maghrib.minute),
+        'Isya': DateTime(now.year, now.month, now.day + 1,
+            selanjutnyaHariIni.isha.hour, selanjutnyaHariIni.isha.minute),
+      };
+    }
+
     for (var entry in waktuBerdoa.entries) {
       if (entry.value.isAfter(now)) {
         upcomingPrayerTime = entry.value;
@@ -175,7 +196,7 @@ class _DashboardPageState extends State<DashboardPage> {
                 ),
                 Container(
                   decoration: BoxDecoration(
-                    color: const Color.fromARGB(255, 106, 98, 111),
+                    color: const Color.fromARGB(255, 173, 173, 173),
                     borderRadius: BorderRadius.circular(12),
                   ),
                   child: Column(
